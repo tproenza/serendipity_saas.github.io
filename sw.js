@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0a172a4f68664741c9cc.js"
+    "url": "webpack-runtime-2508ac6ac748140f6ae3.js"
   },
   {
     "url": "framework-90f0b3ff04962f883af6.js"
   },
   {
-    "url": "app-7f4766d20d29960d7912.js"
+    "url": "app-0825f48b70394419d2ce.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "6a428a27bd1f218fb1ddc48f5bb1204a"
+    "revision": "1ab75bf79a275f2606be070627349ec7"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-c25716df4fbb2532700a.js"
@@ -48,11 +48,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "9b942225692f0aae0faa967d939edd73"
+    "revision": "50b8cd9ca5a35af3c7cf460cf0424ed5"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "3d0e636c20433a2e6e645d954995b05c"
+    "revision": "0152df0454ffa122b8f64a9f7f3875d9"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -140,12 +140,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/tproenza.github.io/serendipity_saas.github.io`), ``)
+  pathname = pathname.replace(new RegExp(`^/serendipity_saas.github.io`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/tproenza.github.io/serendipity_saas.github.io/app-7f4766d20d29960d7912.js`))) {
+  if (!resources || !(await caches.match(`/serendipity_saas.github.io/app-0825f48b70394419d2ce.js`))) {
     return await fetch(event.request)
   }
 
@@ -158,7 +158,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/tproenza.github.io/serendipity_saas.github.io/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/serendipity_saas.github.io/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
