@@ -4,17 +4,19 @@ import Layout from '../components/Layout';
 
 import Scroll from '../components/Scroll';
 
-import pic1 from '../assets/images/pic01.jpg';
-import pic2 from '../assets/images/pic02.jpg';
-import pic3 from '../assets/images/pic03.jpg';
 import config from '../../config';
+
+const pic1 = 'https://user-images.githubusercontent.com/10237026/82745009-265aa380-9d45-11ea-86ce-6855843abece.png';
+const pic2 = 'https://user-images.githubusercontent.com/10237026/82745041-69b51200-9d45-11ea-97f4-a5b5657cebec.png';
+const pic3 = 'https://user-images.githubusercontent.com/10237026/82745098-fc55b100-9d45-11ea-84a4-9d6989425061.png';
+
 const IndexPage = () => (
   <Layout>
     <section id="banner">
       <div className="inner">
         <h2>{config.heading}</h2>
         <p>{config.subHeading}</p>
-        <ul className="actions special">
+        {/* <ul className="actions special">
           <li>
             <Scroll type="id" element="one">
               <a href="/#" className="button primary">
@@ -22,7 +24,7 @@ const IndexPage = () => (
               </a>
             </Scroll>
           </li>
-        </ul>
+        </ul> */}
       </div>
       <Scroll type="id" element="one">
         <a href="#one" className="more">
@@ -35,9 +37,9 @@ const IndexPage = () => (
       <div className="inner">
         <header className="major">
           <h2>
-            Arcu aliquet vel lobortis ata nisl
-            <br />
-            eget augue amet aliquet nisl cep donec
+            Aqui puede ir contenido promocional corriente
+            {/* <br />
+            eget augue amet aliquet nisl cep donec */}
           </h2>
           <p>
             Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
@@ -74,9 +76,9 @@ const IndexPage = () => (
         </div>
         <div className="content">
           <h2>
-            Magna primis lobortis
-            <br />
-            sed ullamcorper
+            Certified Coaches
+            {/* <br />
+            sed ullamcorper */}
           </h2>
           <p>
             Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
@@ -90,9 +92,9 @@ const IndexPage = () => (
         </div>
         <div className="content">
           <h2>
-            Tortor dolore feugiat
-            <br />
-            elementum magna
+            Push your limits
+            {/* <br />
+            elementum magna */}
           </h2>
           <p>
             Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
@@ -106,9 +108,9 @@ const IndexPage = () => (
         </div>
         <div className="content">
           <h2>
-            Augue eleifend aliquet
-            <br />
-            sed condimentum
+            Fun & Community
+            {/* <br />
+            sed condimentum */}
           </h2>
           <p>
             Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
@@ -121,7 +123,7 @@ const IndexPage = () => (
     <section id="three" className="wrapper style3 special">
       <div className="inner">
         <header className="major">
-          <h2>Accumsan mus tortor nunc aliquet</h2>
+          <h2>Join a community that grows strong together</h2>
           <p>
             Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
             eleifend
@@ -180,23 +182,20 @@ const IndexPage = () => (
     <section id="cta" className="wrapper style4">
       <div className="inner">
         <header>
-          <h2>Arcue ut vel commodo</h2>
-          <p>
-            Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet
-            eleifend fringilla.
-          </p>
+          <h2>Unete a la comunidad</h2>
         </header>
         <ul className="actions stacked">
           <li>
-            <a href="/#" className="button fit primary">
-              Activate
+            <a href="https://api.whatsapp.com/send?phone=50762486398" className="button fit whatsapp">
+              <i className="icon brands fa-whatsapp fa-2x"></i>
+              <span style={{'vertical-align': 'super', 'margin-left': '10px'}}>Chateanos</span>
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="/#" className="button fit">
               Learn More
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </section>
